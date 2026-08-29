@@ -10,6 +10,7 @@ import dev.kurai.uhc.example.camp.defaults.SolitaryCamp;
 import dev.kurai.uhc.example.description.PowerDescription;
 import dev.kurai.uhc.example.role.ExampleRole;
 import dev.kurai.uhc.example.role.annotation.RoleCamp;
+import dev.kurai.uhc.example.role.defaults.solitary.test.power.AirBumpPower;
 import dev.kurai.uhc.util.api.annotation.Identifier;
 import dev.kurai.uhc.util.api.annotation.Name;
 import java.time.Duration;
@@ -26,6 +27,7 @@ public final class TestRole extends ExampleRole {
 
   public TestRole(final UUID owner, final ExampleModule module) {
     super(owner, module);
+    this.registerPower(new AirBumpPower(owner, module.getUltraHardcore()));
   }
 
   @Override
