@@ -1,7 +1,7 @@
 package dev.kurai.uhc.example.role;
 
 import dev.kurai.uhc.example.ExampleModule;
-import dev.kurai.uhc.example.role.defaults.solitary.TestRole;
+import dev.kurai.uhc.example.role.defaults.solitary.test.TestRole;
 import dev.kurai.uhc.module.role.registrar.AbstractRoleRegistrar;
 import dev.kurai.uhc.module.role.repository.RoleRepository;
 

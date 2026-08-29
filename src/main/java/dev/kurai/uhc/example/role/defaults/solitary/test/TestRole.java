@@ -1,4 +1,4 @@
-package dev.kurai.uhc.example.role.defaults.solitary;
+package dev.kurai.uhc.example.role.defaults.solitary.test;
 
 import com.google.common.collect.Lists;
 import dev.kurai.uhc.effect.Effect;
