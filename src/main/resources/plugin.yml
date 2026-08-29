@@ -1,0 +1,7 @@
+name: Example-UHC
+version: 1.0.0
+author: kurai
+main: dev.kurai.uhc.example.ExampleUltraHardcorePlugin
+
+depend:
+  - UHC-Engine
