@@ -22,11 +22,12 @@ public final class AirBumpPower extends RightClickItemPower {
   @Override
   public List<String> lore() {
     return Lists.newArrayList(
+        "§e" + CC.BAR_2 + "§f Informations",
         "§6" + CC.SQUARE + "§f Utilisation: §eClic-Droit",
         "§6" + CC.SQUARE + "§f Délai: §e30 secondes",
         "",
         "§e" + CC.BAR_2 + "§f Description",
-        "Vous envoie à§b 15 blocs§f en hauteur.");
+        "Vous projette en hauteur.");
   }
 
   @Override
@@ -36,7 +37,7 @@ public final class AirBumpPower extends RightClickItemPower {
 
   @Override
   public boolean onUse(final Player player) {
-    player.setVelocity(new Vector(0, 5, 0));
+    player.setVelocity(new Vector(0, 2, 0));
     return true;
   }
 }
