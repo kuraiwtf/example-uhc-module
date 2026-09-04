@@ -38,11 +38,6 @@ public final class ExampleWinCelebration implements WinCelebration {
         .appendNewline();
 
     for (final ExampleCampData campData : this.module.getCampRegistrar().getRegistry()) {
-      message
-          .appendNewline()
-          .append(
-              text(colorize(" " + campData.getChatColor() + BAR_2 + " §l" + campData.getName())));
-
       final var teamPlayers =
           players.stream()
               .filter(
@@ -54,6 +49,15 @@ public final class ExampleWinCelebration implements WinCelebration {
                               .isAssignableFrom(
                                   profile.getComponent(CampComponent.class).camp().getClass()))
               .toList();
+
+      if (teamPlayers.isEmpty()) {
+        continue;
+      }
+
+      message
+          .appendNewline()
+          .append(
+              text(colorize(" " + campData.getChatColor() + BAR_2 + " §l" + campData.getName())));
       for (final var profile : teamPlayers) {
         message
             .appendNewline()
