@@ -9,9 +9,12 @@ import dev.kurai.uhc.example.listener.ExampleWaitingListener;
 import dev.kurai.uhc.example.role.ExampleRoleData;
 import dev.kurai.uhc.example.slot.slot.ExampleSlotProvider;
 import dev.kurai.uhc.example.timer.RoleAttributionTimer;
+import dev.kurai.uhc.example.win.ExampleWinCelebration;
+import dev.kurai.uhc.example.win.ExampleWinCondition;
 import dev.kurai.uhc.game.configuration.ore.OreConfiguration;
 import dev.kurai.uhc.game.death.DeathService;
 import dev.kurai.uhc.timer.TimerService;
+import dev.kurai.uhc.win.WinService;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class ExampleUltraHardcorePlugin extends JavaPlugin {
@@ -51,5 +54,9 @@ public final class ExampleUltraHardcorePlugin extends JavaPlugin {
     timerService.registerTimers(new RoleAttributionTimer(this.module));
 
     this.ultraHardcore.moduleService().installModule(this.module);
+
+    final WinService winService = this.ultraHardcore.winService();
+    winService.installWinCelebration(new ExampleWinCelebration(this.module, this.ultraHardcore));
+    winService.installWinCondition(new ExampleWinCondition(this.ultraHardcore));
   }
 }
