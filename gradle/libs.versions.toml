@@ -4,10 +4,12 @@ spigot = '1.8.8-R0.1-SNAPSHOT'
 uhc-api = '1.5.0'
 packetevents-api = '2.11.1'
 lombok = '1.18.46'
+menu-api = "1.5.5"
 
 [libraries]
 apollo-api = { module = 'com.lunarclient:apollo-api', version.ref = 'apollo-api' }
 spigot = { module = 'org.spigotmc:spigot', version.ref = 'spigot' }
+menu-api = { module = "net.j4c0b3y:MenuAPI-core", version.ref = "menu-api" }
 uhc-api = { module = 'dev.kurai.uhc:uhc-api', version.ref = 'uhc-api' }
 packetevents-spigot = { module = 'com.github.retrooper:packetevents-spigot', version.ref = 'packetevents-api' }
 lombok = { module = 'org.projectlombok:lombok', version.ref = 'lombok' }

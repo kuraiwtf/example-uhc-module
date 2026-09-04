@@ -28,6 +28,7 @@ dependencies {
   compileOnly(libs.apollo.api)
   compileOnly(libs.spigot)
   compileOnly(libs.uhc.api)
+  compileOnly(libs.menu.api)
   compileOnly(libs.packetevents.spigot)
   compileOnly(libs.lombok)
   annotationProcessor(libs.lombok)
